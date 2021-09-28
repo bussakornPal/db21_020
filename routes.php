@@ -5,18 +5,13 @@ function call($controllers,$action){
 }
 if(array_key_exits($controllers,$controllers))
 {
-    
-if(in_array($action,$controllers[$controller]))
-{​​​​
-    call($controller,$action);
-}​​​​
-else
-{​​​​
-    call('pages','error');
-}​​​​
+    if(in_array($action,$controllers[$controller])){​​​​
+        call($controller,$action);
+    }​​​​ else{​​​​
+        call('pages','error');}​​​​
 }
 else 
 {
-    call('pages','error')
+    call('pages','error');
 }
 ?>
