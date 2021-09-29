@@ -10,7 +10,7 @@
     public $id_staff;
     public $id_customer;
 
-    public Order($id_order_cus,$date_order,$condition_payment,$status_deli,$status_produce,$date_payment_1,$date_payment_2,$date_produce,$id_staff,$id_customer)
+    public function __construct($id_order_cus,$date_order,$condition_payment,$status_deli,$status_produce,$date_payment_1,$date_payment_2,$date_produce,$id_staff,$id_customer)
     {
         $this->id_order_cus = $id_order_cus;
         $this->date_order = $date_order;
@@ -28,7 +28,7 @@
         $orderList=[];
         require("connect_database.php");
         $sql="select * from order_customer";
-        $result=conn->query($sql);
+        $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
             $id_order_cus = $my_row[id_order_cus];
@@ -43,7 +43,7 @@
             $id_customer = $my_row[id_customer];
             $orderList[] = new Order($id_order_cus,$date_order,$condition_payment,$status_deli,$status_produce,$date_payment_1,$date_payment_2,$date_produce,$id_staff,$id_customer);
         }
-        require("connection_close.php")
+        require("connection_close.php");
         return $orderList;
 
     }
