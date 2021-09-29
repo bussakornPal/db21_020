@@ -10,7 +10,7 @@ public function __construct($id_range,$min_range,$max_range,$price,$color_price,
 }
 public static function getAll(){
     $range_priceList = [];
-    require("connection_database.php");
+    require("connect_database.php");
     $sql = " select * from range_price ";
     $result = $conn->query($sql);
     while($my_row = $result->fetch_assoc()){
