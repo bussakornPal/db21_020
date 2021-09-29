@@ -16,7 +16,7 @@
     }else{
         echo "Successfully connected to database<br>";
     }
-    
+    $conn->close();
 
 
 ?>
