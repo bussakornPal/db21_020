@@ -37,12 +37,19 @@
 
     }
      public static function Add($id_customer,$name_customer,$id_staff,$fname_staff)
-     {
+     { 
         require("connect_database.php");
-        $sql = "";
+        $sql = "SELECT * FROM order_cutomer NATURAL JOIN staff NATURAL JOIN customer";
         $result = $conn->query($sql);
+        $my_row=$result->fetch_assoc();
+        $id_order_cus = $my_row[id_order_cus];
+        $date_order = $my_row[date_order];
+        $id_staff = $my_row[id_staff];
+        $fname_staff= $my_row[fname_staff];
+        $id_customer = $my_row[id_customer];
+        $name_customer = $my_row[name_customer];
         require("connection_close.php");
-        return ;
+        return new Order($id_order_cus,$date_order,$id_staff,$id_customer,$fname_staff,$name_customer);
      }
 
 
