@@ -15,6 +15,8 @@
     if(!$conn->select_db($dbname)){
         die("Connection failed: " . $conn->connect_error);
   
+    }else{
+        echo "Successfully connected to database <br>";
     }
   
 
