@@ -21,7 +21,7 @@
             $amount_order_cus = $my_row[amount_order_cus];
             $id_order_cus = $my_row[id_order_cus];
             $id_cop = $my_row[id_cop];
-            $detail_order_list = new detail_order($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop);
+            $detail_orderList = new detail_order($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop);
         }
         require("connection_close.php");
         return $detail_orderList;
