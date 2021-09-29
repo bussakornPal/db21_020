@@ -1,4 +1,4 @@
-<from method="get" action="">
+<form method="get" action="">
 <label>รหัส <input type="text" name="id_order_cus"/></label><br>
 <label>วันที่ <input type="text" name="date_order"/></label><br>
 <label>ชื่อลูกค้า <select name="id_customer">
@@ -13,5 +13,5 @@
 </select></label><br>
 <input type="hidden"name="controller"value="order"/>
 <botton type= "submit"name="action"value="index">back</botton>
-<botton type= "submit"name="action"value="newOrder">Save</botton>
-</from>
+<botton type= "submit"name="action"value="addOrder">Save</botton>
+</form>
