@@ -2,7 +2,7 @@
     public function index()
     {
         $order_List=Order::getAll();
-        require_once("./controllers/order_controller.php");
+        require_once("./views/order/index_order.php");
     }
 
 }
