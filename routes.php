@@ -1,5 +1,5 @@
 <?php
-$controllers = array('pages'=>['home','error'],'order'=>['index'],'detail_order'=>['index'],'range_price'=>['index']);
+$controllers = array('pages'=>['home','error'],'order'=>['index','newOrder'],'detail_order'=>['index','newdetail_order'],'range_price'=>['index']);
 
 function call($controller,$action){
     require_once("./controllers/".$controller."_controller.php");
