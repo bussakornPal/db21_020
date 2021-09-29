@@ -11,7 +11,7 @@
     $dep->fname_staff</option>";}
     ?>
 </label><br>
-<input type="hidden"name="controller"value="student"/>
-<botton type= "submit"name="action"value="index"></botton>
+<input type="hidden"name="controller"value="order"/>
+<botton type= "submit"name="action"value="index">back</botton>
 <botton type= "submit"name="action"value="addOrder">Save</botton>
 </from>
