@@ -1,12 +1,12 @@
 <?php class Order{
-    public $id_order_cus;
-    public $date_order;
+    public $id;
+    public $do;
 
 
-    public function __construct($id_order_cus,$date_order)
+    public function __construct($id,$do)
     {
-        $this->id_order_cus = $id_order_cus;
-        $this->date_order = $date_order;
+        $this->id = $id;
+        $this->do = $do;
        
     }
     public static function getAll()
@@ -17,10 +17,10 @@
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
-            $id_order_cus = $my_row[id_order_cus];
-            $date_order = $my_row[date_order];
+            $id = $my_row[id_order_cus];
+            $do = $my_row[date_order];
             
-            $orderList[] = new Order($id_order_cus,$date_order);
+            $orderList[] = new Order($id,$do);
         }
         require("connection_close.php");
         return $orderList;
