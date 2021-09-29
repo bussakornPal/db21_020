@@ -1,4 +1,4 @@
-<?php class Oder{
+<?php class Order{
     public $id_order_cus;
     public $date_order;
     public $condition_payment;
@@ -10,7 +10,7 @@
     public $id_staff;
     public $id_customer;
 
-    public Oder($id_order_cus,$date_order,$condition_payment,$status_deli,$status_produce,$date_payment_1,$date_payment_2,$date_produce,$id_staff,$id_customer)
+    public Order($id_order_cus,$date_order,$condition_payment,$status_deli,$status_produce,$date_payment_1,$date_payment_2,$date_produce,$id_staff,$id_customer)
     {
         $this->id_order_cus = $id_order_cus;
         $this->date_order = $date_order;
@@ -41,7 +41,7 @@
             $date_produce = $my_row[date_produce];
             $id_staff = $my_row[id_staff];
             $id_customer = $my_row[id_customer];
-            $orderList[] = new Oder($id_order_cus,$date_order,$condition_payment,$status_deli,$status_produce,$date_payment_1,$date_payment_2,$date_produce,$id_staff,$id_customer);
+            $orderList[] = new Order($id_order_cus,$date_order,$condition_payment,$status_deli,$status_produce,$date_payment_1,$date_payment_2,$date_produce,$id_staff,$id_customer);
         }
         require("connection_close.php")
         return $orderList;

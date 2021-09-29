@@ -7,7 +7,7 @@ function call($controllers,$action){
     switch($controller)
     {
         case"pages":    $controller = new PagesController();
-        case"order":    $controller = new Oder();
+        case"order":    $controller = new OrderController();
                         break;
     }
     $controller->{$action}();
