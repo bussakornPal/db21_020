@@ -8,15 +8,14 @@
     if($conn->connect_error){
         die("Connection failed:".$conn->connect_error);
     }
-    echo "Successfully connected to server <br>";
+   
 
 
     if(!$conn->select_db($dbname)){
-        echo $conn->connect_error;
-    }else{
-        echo "Successfully connected to database<br>";
+        die("Connection failed: " . $conn->connect_error);
+  
     }
-    $conn->close();
+  
 
 
 ?>
