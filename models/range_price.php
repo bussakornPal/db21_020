@@ -20,7 +20,7 @@ public static function getAll(){
         $price = $my_row[price];
         $color_price = $my_row[color_price];
         $id_product = $my_row[id_product];
-        $range_priceList = new range_price($ranid_range,$ranmin_range,$ranmax_range,$ranprice,$rancolor_price,$ranid_product);
+        $range_priceList[] = new range_price($ranid_range,$ranmin_range,$ranmax_range,$ranprice,$rancolor_price,$ranid_product);
     }
     require("connection_close.php");
     return $range_priceList;
