@@ -13,7 +13,7 @@
         $detail_orderList =[];
         require("connect_database.php");
         $sql = "select * from detail_order_customer";
-        $result = conn->query($sql);
+        $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc())
         {
             $id_doc = $my_row[id_doc];

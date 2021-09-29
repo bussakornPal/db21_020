@@ -12,7 +12,7 @@ function call($controller,$action){
         case "order":   require_once("./models/order.php");
                         $controller = new OrderController();
                         break;
-        case "detail_order" : require_once("models/detail_order.php");
+        case "detail_order" : require_once("./models/detail_order.php");
                             $controller = new Detail_OrderController();
                             break;
     }
