@@ -3,11 +3,13 @@ $controllers = array('pages'=>['home','error'],'order'=>['index']);
 
 function call($controllers,$action){
     require_once("controllers/".$controller."_controller.php");
-    require_once("models/order.php");
+    
     switch($controller)
     {
         case"pages":    $controller = new PagesController();
-        case"order":    $controller = new OrderController();
+                        break;
+        case"order":    require_once("./models/order.php");
+                        $controller = new OrderController();
                         break;
     }
     $controller->{$action}();
