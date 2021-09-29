@@ -1,4 +1,4 @@
-<from medthod="get" action="">
+<from method="get" action="">
 <label> รหัสรายละเอียด <input type="text" name="id_doc"/> </label><br>
 <label> จำนวนสีสกรีน <input type="text" name="print_color"/> </label><br>
 <label> จำนวนที่สั่ง <input type="text" name="print_color"/> </label><br>
