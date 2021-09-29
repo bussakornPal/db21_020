@@ -10,16 +10,16 @@ public function _construct($id_range,$min_range,$max_range,$price,$color_price,$
 }
 public static function getAll(){
     $range_priceList = [];
-    require("connection_connect.php");
-    $sql = " select * from department ";
+    require("connection_database.php");
+    $sql = " select * from range_price ";
     $result = $conn->query($sql);
     while($my_row == $result->fetch_assoc()){
-        $ranid_range = $my_row[$ranid_range];
-        $ranmin_range = $my_row[$ranmin_range];
-        $ranmax_range = $my_row[$ranmax_range];
-        $ranprice = $my_row[$ranprice];
-        $rancolor_price = $my_row[$rancolor_price];
-        $ranid_product = $my_row[$ranid_product];
+        $ranid_range = $my_row[ranid_range];
+        $ranmin_range = $my_row[ranmin_range];
+        $ranmax_range = $my_row[ranmax_range];
+        $ranprice = $my_row[ranprice];
+        $rancolor_price = $my_row[rancolor_price];
+        $ranid_product = $my_row[ranid_product];
         $range_priceList = new range_price($ranid_range,$ranmin_range,$ranmax_range,$ranprice,$rancolor_price,$ranid_product);
     }
     require("connection_close.php");
