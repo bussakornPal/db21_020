@@ -38,7 +38,7 @@
     }
      public static function Add($id_customer,$name_customer,$id_staff,$fname_staff)
      {
-        require("connection_connect.php");
+        require("connect_database.php");
         $sql = "";
         $result = $conn->query($sql);
         require("connection_close.php");
