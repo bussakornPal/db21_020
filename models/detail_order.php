@@ -1,6 +1,6 @@
 <?php class detail_order{
     public $id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop;
-    public function _construct($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop)
+    public function __construct($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop)
     {
         $this->id_doc = $id_doc;
         $this->print_color = $print_color;
