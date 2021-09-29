@@ -14,9 +14,11 @@ function call($controller,$action){
                         require_once("./models/customer.php");
                         $controller = new OrderController();
                         break;
-        case "detail_order" : require_once("./models/detail_order.php");
-                            $controller = new Detail_OrderController();
-                            break;
+        case "detail_order" :   require_once("./models/detail_order.php");
+                                require_once("./models/order.php");
+                                require_once("./models/color_of_product.php");
+                                $controller = new Detail_OrderController();
+                                break;
         case "range_price" : require_once("./models/range_price.php");
                             $controller = new Range_PriceController();
                             break;
