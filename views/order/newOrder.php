@@ -5,13 +5,13 @@
     <?php foreach($customer_List as $dep) {echo "<option value = $dep->id_customer>
     $dep->name_customer</option>";}
     ?>
-</label><br>
+</select></label><br>
 <label>ชื่อพนักงาน <select name="id_staff">
     <?php foreach($staff_List as $dep) {echo "<option value = $dep->id_staff>
     $dep->fname_staff</option>";}
     ?>
-</label><br>
+</select></label><br>
 <input type="hidden"name="controller"value="order"/>
 <botton type= "submit"name="action"value="index">back</botton>
-<botton type= "submit"name="action"value="addOrder">Save</botton>
+<botton type= "submit"name="action"value="newOrder">Save</botton>
 </from>
