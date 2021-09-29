@@ -1,6 +1,6 @@
 <?php class range_price{
 public $id_range,$min_range,$max_range,$price,$color_price,$id_product;
-public range_price($id_range,$min_range,$max_range,$price,$color_price,$id_product){
+public function _construct($id_range,$min_range,$max_range,$price,$color_price,$id_product){
     $this->id_range = $id_range;
     $this->min_range = $min_range;
     $this->max_range = $max_range;
