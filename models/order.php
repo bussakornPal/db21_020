@@ -23,7 +23,7 @@
         $this->id_staff = $id_staff;
         $this->id_customer = $id_customer;
     }
-    public static function getALL()
+    public static function getAll()
     {
         $orderList=[];
         require("connect_database.php");

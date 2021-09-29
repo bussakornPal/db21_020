@@ -8,7 +8,7 @@ function call($controllers,$action){
     {
         case"pages":    $controller = new PagesController();
                         break;
-        case"order":    require_once("./models/order.php");
+        case"order":    require_once("models/order.php");
                         $controller = new OrderController();
                         break;
     }
