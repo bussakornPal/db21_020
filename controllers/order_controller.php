@@ -13,11 +13,17 @@
      {
          echo "hh";
          $id_order_cus=$_GET['id_order_cus'];
+         echo $_GET['id_order_cus'];
         $date_order=$_GET['date_order'];
          $fname_staff=$_GET['fname_staff'];
         $name_customer=$_GET['name_customer'];
         Order::Add($id_order_cus,$date_order,$fname_staff,$name_customer);
         OrderController::index();
+    }
+    public function updateForm()
+    {
+        $id_order_cus=$_GET['id_order_cus'];
+       
     }
 
 }
