@@ -11,11 +11,12 @@
     }
      public function addOrder()
      {
-         $id_customer=$_GET['id_customer'];
-      $id_staff=$_GET['id_staff'];
+         echo "hh";
+         $id_order_cus=$_GET['id_order_cus'];
+        $date_order=$_GET['date_order'];
          $fname_staff=$_GET['fname_staff'];
         $name_customer=$_GET['name_customer'];
-        Order::Add($id_customer,$name_customer,$id_staff,$fname_staff);
+        Order::Add($id_order_cus,$date_order,$fname_staff,$name_customer);
         OrderController::index();
     }
 
