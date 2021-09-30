@@ -36,7 +36,7 @@
         return $orderList;
 
     }
-     public static function Add($id_customer,$name_customer,$id_staff,$fname_staff)
+     public static function Add($id_order_cus,$date_order,$name_customer,$fname_staff)
      { 
         require("connect_database.php");
         $sql = "SELECT * FROM order_cutomer NATURAL JOIN staff NATURAL JOIN customer";
