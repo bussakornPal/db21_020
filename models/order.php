@@ -96,6 +96,7 @@
     
      public static function update($id_order_cus,$date_order,$id_staff,$id_customer)
      {
+        echo "jj";
         require("connect_database.php");
         $sql="UPDATE `order_cutomer` SET `id_order_cus`='$id_order_cus',`date_order`='$date_order',
         `id_staff`='$id_staff',`id_customer`='$id_customer' WHERE id_order_cus = '$id_order_cus'";
