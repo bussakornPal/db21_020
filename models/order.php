@@ -40,6 +40,7 @@
     }
     public static function get($id_order_cus)
     {
+        echo "get()";
         require("connection_connect.php");
         $sql="SELECT * FROM order_cutomer NATURAL JOIN staff NATURAL JOIN customer";
         $result=$conn->query($sql);

@@ -7,6 +7,7 @@
     }
     public static function getAll()
     {
+        echo "cu";
         $customerList=[];
         require("connect_database.php");
         $sql="select * from customer";
