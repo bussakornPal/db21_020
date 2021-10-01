@@ -6,7 +6,7 @@ new order <a href=?controller=order&action=newOrder> click</a><br>
         <button type="submit" name="action" value="search">
 search</button>
 </form>
-<tr><td>id_order_cus</td><td>date_order</td><td>fname_staff</td><td>name_customer</td><td>address_customer</td><td>phone</td><td>update</td><td>delete</td></tr>
+<tr><td>id_order_cus</td><td>name_customer</td><td>date_order</td><td>address_customer</td><td>phone</td><td>fname_staff</td><td>update</td><td>delete</td></tr>
 <?php foreach($order_List as $order)
 {
         echo "<tr><td>$order->id_order_cus</td>
