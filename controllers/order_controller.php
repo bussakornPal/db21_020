@@ -44,7 +44,7 @@
     {
         $key=$_GET['key'];
         $order_List=Order::search($key);
-        require_once('./views/order/index_order.php')
+        require_once('./views/order/index_order.php');
     }
     
 
