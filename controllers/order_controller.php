@@ -36,6 +36,8 @@
         $date_order=$_GET['date_order'];
         $id_staff=$_GET['id_staff'];
         $id_customer=$_GET['id_customer'];
+        echo "oo".$id_order_cus." ".$date_order." ".$id_customer." ".$id_staff." ";
+
         Order::update($id_order_cus,$date_order,$id_staff,$id_customer);
         OrderController::index();
     }
