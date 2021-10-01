@@ -29,7 +29,7 @@
     public static function search($key)
     {
         require("connect_database.php");
-        $sql = "S"
+        $sql = "";
     }
 }
 ?>
