@@ -10,7 +10,7 @@
     }
     public static function getAll()
     {
-        echo "hello";
+        //echo "hello";
         $detail_orderList =[];
         require("connect_database.php");
         $sql = "select * from detail_order_customer";
@@ -24,7 +24,7 @@
             $id_cop = $my_row[id_cop];
             $detail_orderList[] = new detail_order($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop);
         }
-        echo "bye";
+        //echo "bye";
         require("connection_close.php");
         return $detail_orderList;
     }
