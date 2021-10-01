@@ -5,6 +5,13 @@
 <label> รหัสออเดอร์ <select name="id_order_cus">
     <?php foreach($order_List as $order){echo "<option value=$order->id_order_cus> $order->date_order</option>";}?>
 </select> </label><br>
+
+<label>รหัสสินค้า <select name="id_cop">
+    <?php foreach($color_of_productList as $cop) {echo "<option value = $cop->id_cop>
+    $cop->id_product</option>";}
+    ?>
+</select></label><br>
+
 <input type="hidden" name="controller" value="detail_order"/>
 <button type="submit"name="action" value="index"> Back </button>
 <button type="submit"name="action" value="addDetail_order"> Save </button>
