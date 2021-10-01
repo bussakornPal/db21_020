@@ -13,7 +13,7 @@
         //echo "hello";
         $detail_orderList =[];
         require("connect_database.php");
-        $sql = "select * from detail_order_customer";
+        $sql = "SELECT * FROM detail_order_customer";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc())
         {
