@@ -1,5 +1,4 @@
-<?php echo "eyee";
-?>
+
 <form method="get" action="">
 <label> รหัสรายละเอียด <input type="text" name="id_doc"/> </label><br>
 <label> จำนวนสีสกรีน <input type="number" name="print_color"/> </label><br>
