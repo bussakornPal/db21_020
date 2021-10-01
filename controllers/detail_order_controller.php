@@ -7,10 +7,10 @@
     }
     public function newdetail_order()
     {
-        echo "hi";
+        //echo "hi";
         $order_List = Order::getAll();
         $color_of_product_List = color_of_product::getAll();
-        require_once("./view/detail_order/newDetail_order.php");
+        require_once('./view/detail_order/newDetail_order.php');
     }
     public function search()
     {
