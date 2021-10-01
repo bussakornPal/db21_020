@@ -27,6 +27,7 @@
         $staff_List=staff::getAll();
         $customer_List=customer::getAll();
         $order=Order::get($id_order_cus);
+        echo "pp";
         require_once('./views/order/updateForm.php');
        
     }

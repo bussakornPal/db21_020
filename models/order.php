@@ -45,8 +45,9 @@
     public static function get($id_order_cus)
     {
         echo "get()";
-        require("connection_connect.php");
+        require("connect_database.php");
         $sql="SELECT * FROM order_cutomer NATURAL JOIN staff NATURAL JOIN customer WHERE id_order_cus='$id_order_cus'";
+        echo $sql;
         $result=$conn->query($sql);
         $my_row=$result->fetch_assoc();
         $id_order_cus = $my_row[id_order_cus];
@@ -57,13 +58,14 @@
         $id_customer=$my_row[id_customer];
         $address_customer=$my_row[address_customer];
         $phone=$my_row[phone];
+        echo "ll";
         require("connection_close.php");
         return new Order($id_order_cus,$date_order,$fname_staff,$name_customer,$address_customer,$phone,$id_staff,$id_customer);
 
     }
     public static function search($key)
     {
-        require("connection_connect.php");
+        require("connect_database.php");
         $sql="SELECT * FROM order_cutomer NATURAL JOIN staff NATURAL JOIN customer WHERE (date_order like '%$key%' or fname_staff like '%$key%' or name_customer like '%$key%')and id_order_cus=id_staff";
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
