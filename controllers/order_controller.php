@@ -22,7 +22,7 @@
     public function updateForm()
     {
        
-        $id_order_cus=$_GET['ID'];
+        $id_order_cus=$_GET['id_order_cus'];
         $staff_List=staff::getAll();
         $customer_List=customer::getAll();
         $order=Order::get($id_order_cus);
@@ -31,14 +31,14 @@
     }
     public function update()
     {
-        echo "kk";
         $id_order_cus=$_GET['id_order_cus'];
         $date_order=$_GET['date_order'];
-        $id_staff=$_GET['id_staff'];
-        $id_customer=$_GET['id_customer'];
-        echo "oo".$id_order_cus." ".$date_order." ".$id_customer." ".$id_staff." ";
+        $id_staff=$_GET['fname_staff'];
+        $id_customer=$_GET['name_customer'];
+        $id=$_GET['id'];
+        //echo "oo".$id_order_cus." ".$date_order." ".$id_customer." ".$id_staff." ".$id;
 
-        Order::update($id_order_cus,$date_order,$id_staff,$id_customer);
+        Order::update($id_order_cus,$date_order,$id_staff,$id_customer,$id);
         OrderController::index();
     }
     public function search()
