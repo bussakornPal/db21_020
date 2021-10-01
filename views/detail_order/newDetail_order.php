@@ -1,11 +1,10 @@
-<?php echo "eyee";
-?>
+
 <form method="get" action="">
 <label> รหัสรายละเอียด <input type="text" name="id_doc"/> </label><br>
 <label> จำนวนสีสกรีน <input type="number" name="print_color"/> </label><br>
 <label> จำนวนที่สั่ง <input type="number" name="amount_order_cus"/> </label><br>
 <label> รหัสออเดอร์ <select name="id_order_cus">
-    <?php foreach($order_List as $order){echo "<option value = $order->id_order_cus> $order->date_order</option>";}?>
+    <?php foreach($order_List as $order){echo "<option value = $order->id_order_cus> $order->id_order_cus</option>";}?>
 </select> </label><br>
 
 <label>รหัสสินค้า <select name="id_cop">
