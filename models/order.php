@@ -8,7 +8,7 @@
     public $address_customer;
     public $phone;
 
-    public function __construct($id_order_cus,$date_order,$fname_staff,$name_customer,$address_customer,$phone)
+    public function __construct($id_order_cus,$date_order,$fname_staff,$name_customer,$address_customer,$phone,$id_staff,$id_customer)
     {
         $this->id_order_cus = $id_order_cus;
         $this->date_order = $date_order;
@@ -16,6 +16,8 @@
         $this->name_customer = $name_customer;
         $this->address_customer=$address_customer;
         $this->phone=$phone;
+        $this->id_customer=$id_customer;
+        $this->id_staff=$id_staff;
     }
     public static function getAll()
     {
@@ -28,10 +30,12 @@
             $id_order_cus = $my_row[id_order_cus];
             $date_order = $my_row[date_order];
             $fname_staff= $my_row[fname_staff];
+            $id_staff=$my_row[id_staff];
             $name_customer = $my_row[name_customer];
+            $id_customer=$my_row[id_customer];
             $address_customer=$my_row[address_customer];
             $phone=$my_row[phone];
-            $orderList[] = new Order($id_order_cus,$date_order,$fname_staff,$name_customer,$address_customer,$phone);
+            $orderList[] = new Order($id_order_cus,$date_order,$fname_staff,$name_customer,$address_customer,$phone,$id_staff,$id_customer);
         }
         require("connection_close.php");
         return $orderList;
@@ -48,11 +52,13 @@
         $id_order_cus = $my_row[id_order_cus];
         $date_order = $my_row[date_order];
         $fname_staff= $my_row[fname_staff];
+        $id_staff=$my_row[id_staff];
         $name_customer = $my_row[name_customer];
+        $id_customer=$my_row[id_customer];
         $address_customer=$my_row[address_customer];
         $phone=$my_row[phone];
         require("connection_close.php");
-        return new Order($id_order_cus,$date_order,$fname_staff,$name_customer,$address_customer,$phone);
+        return new Order($id_order_cus,$date_order,$fname_staff,$name_customer,$address_customer,$phone,$id_staff,$id_customer);
 
     }
     public static function search()
@@ -67,7 +73,7 @@
             $fname_staff= $my_row[fname_staff];
             $name_customer = $my_row[name_customer];
             
-            $orderList[] = new Order($id_order_cus,$date_order,$fname_staff,$name_customer,$address_customer,$phone);
+            $orderList[] = new Order($id_order_cus,$date_order,$fname_staff,$name_customer,$address_customer,$phone,$id_staff,$id_customer);
         }
         require("connection_close.php");
         return $orderList;

@@ -24,10 +24,9 @@
     {
         echo "jj";
         $id_order_cus=$_GET['id_order_cus'];
-        echo $id_order_cus;
-        $order=Order::get($id_order_cus);
         $staff_List=staff::getAll();
         $customer_List=customer::getAll();
+        $order=Order::get($id_order_cus);
         require_once('./views/order/updateForm.php');
        
     }

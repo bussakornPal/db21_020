@@ -8,16 +8,16 @@
     <?php foreach($staff_List as $dep) {
         echo "<option value = $dep->id_staff";
         if($dep->id_staff==$order->id_staff){echo "selected='selected'";}
-         echo "$dep->fname_staff</option>";}
+         echo ">$dep->fname_staff</option>";}
     ?>
     </select></label><br>
 <label>ชื่อลูกค้า <select name="name_customer">
     <?php foreach($customer_List as $dep) {
         echo "<option value = $dep->id_customer";
         if($dep->id_customer==$order->id_customer){echo "selected='selected'";}
-         echo "$dep->name_customer</option>";}
+         echo ">$dep->name_customer</option>";}
     ?>
-</select></label><br>
+</select></label><br> 
 
 <input type="hidden"name="controller"value="order"/>
 <button type= "submit"name="action"value="index">back</button>
