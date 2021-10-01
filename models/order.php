@@ -44,7 +44,6 @@
     }
     public static function get($id_order_cus)
     {
-        echo "get()";
         require("connect_database.php");
         $sql="SELECT * FROM order_cutomer NATURAL JOIN staff NATURAL JOIN customer WHERE id_order_cus='$id_order_cus'";
         echo $sql;
@@ -58,7 +57,6 @@
         $id_customer=$my_row[id_customer];
         $address_customer=$my_row[address_customer];
         $phone=$my_row[phone];
-        echo "ll";
         require("connection_close.php");
         return new Order($id_order_cus,$date_order,$fname_staff,$name_customer,$address_customer,$phone,$id_staff,$id_customer);
 
@@ -96,7 +94,7 @@
         return  ;
      }
     
-     public static function update($id_order_cus,$date_order,$fname_staff,$name_customer)
+     public static function update($id_order_cus,$date_order,$id_staff,$id_customer)
      {
         require("connect_database.php");
         $sql="UPDATE `order_cutomer` SET `id_order_cus`='$id_order_cus',`date_order`='$date_order',
