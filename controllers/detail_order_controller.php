@@ -11,5 +11,11 @@
         $color_of_product_List = color_of_product::getAll();
         require_once("./view/detail_order/newDetail_order.php");
     }
+    public function search()
+    {
+        $key=$_GET['key'];
+        $detail_order_List=detail_order::search($key);
+        require_once("./views/detail_order/index_detail_order.php");
+    }
 }
 ?>
