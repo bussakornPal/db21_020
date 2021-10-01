@@ -9,7 +9,7 @@
 
 <label>รหัสสินค้า <select name="id_cop">
     <?php foreach($color_of_productList as $cop) {echo "<option value = $cop->id_cop>
-    $cop->id_product</option>";}
+    $cop->id_cop</option>";}
     ?>
 </select></label><br>
 
