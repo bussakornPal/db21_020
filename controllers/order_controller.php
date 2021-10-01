@@ -22,7 +22,7 @@
     public function updateForm()
     {
        
-        $id_order_cus=$_GET['id_order_cus'];
+        $id_order_cus=$_GET['ID'];
         $staff_List=staff::getAll();
         $customer_List=customer::getAll();
         $order=Order::get($id_order_cus);
