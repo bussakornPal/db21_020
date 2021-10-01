@@ -40,6 +40,12 @@
         Order::update($id_order_cus,$date_order,$fname_staff,$name_customer);
         OrderController::index();
     }
+    public function search()
+    {
+        $key=$_GET['key'];
+        $order_List=Order::search($key);
+        require_once('./views/order/index_order.php')
+    }
     
 
 }

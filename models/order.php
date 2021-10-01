@@ -61,10 +61,10 @@
         return new Order($id_order_cus,$date_order,$fname_staff,$name_customer,$address_customer,$phone,$id_staff,$id_customer);
 
     }
-    public static function search()
+    public static function search($key)
     {
         require("connection_connect.php");
-        $sql="SELECT * FROM order_cutomer NATURAL JOIN staff NATURAL JOIN customer WHERE (date_order like '%key%' or fname_staff like '%key%' or name_customer like '%key%')and id_order_cus=id_staff";
+        $sql="SELECT * FROM order_cutomer NATURAL JOIN staff NATURAL JOIN customer WHERE (date_order like '%$key%' or fname_staff like '%$key%' or name_customer like '%$key%')and id_order_cus=id_staff";
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
