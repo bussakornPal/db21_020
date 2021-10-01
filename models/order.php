@@ -14,8 +14,8 @@
         $this->date_order = $date_order;
         $this->fname_staff = $fname_staff;
         $this->name_customer = $name_customer;
-        $this->$address_customer=$address_customer;
-        $this->$phone=$phone;
+        $this->address_customer=$address_customer;
+        $this->phone=$phone;
     }
     public static function getAll()
     {
@@ -48,6 +48,8 @@
         $date_order = $my_row[date_order];
         $fname_staff= $my_row[fname_staff];
         $name_customer = $my_row[name_customer];
+        $address_customer=$my_row[address_customer];
+        $phone=$my_row[phone];
         require("connection_close.php");
         return new Order($id_order_cus,$date_order,$fname_staff,$name_customer,$address_customer,$phone);
 

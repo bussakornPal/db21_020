@@ -18,3 +18,4 @@
 <button type= "submit"name="action"value="index">back</button>
 <button type= "submit"name="action"value="addOrder">Save</button>
 
+</form>
