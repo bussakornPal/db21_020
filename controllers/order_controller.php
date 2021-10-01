@@ -27,16 +27,18 @@
         $staff_List=staff::getAll();
         $customer_List=customer::getAll();
         $order=Order::get($id_order_cus);
+        echo "pp";
         require_once('./views/order/updateForm.php');
        
     }
     public function update()
     {
         echo "kk";
+        
         $id_order_cus=$_GET['id_order_cus'];
         $date_order=$_GET['date_order'];
-        $fname_staff=$_GET['fname_staff'];
-        $name_customer=$_GET['name_customer'];
+        $fname_staff=$_GET['id_staff'];
+        $name_customer=$_GET['id_customer'];
         Order::update($id_order_cus,$date_order,$fname_staff,$name_customer);
         OrderController::index();
     }
