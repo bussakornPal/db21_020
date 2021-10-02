@@ -18,5 +18,9 @@
         $detail_order_List=detail_order::search($key);
         require_once("./views/detail_order/index_detail_order.php");
     }
+    public function adddetail_order()
+    {
+        
+    }
 }
 ?>
