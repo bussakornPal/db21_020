@@ -44,8 +44,17 @@
     public function search()
     {
         $key=$_GET['key'];
+        echo $key;
         $order_List=Order::search($key);
         require_once('./views/order/index_order.php');
+    }
+    public function deleteConfirm()
+    {
+        $id=$_GET['id'];
+        $order=Order::get($id);
+        require_once('./views/order/deleteConfirm.php');
+
+
     }
     
 
