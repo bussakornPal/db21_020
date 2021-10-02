@@ -10,7 +10,7 @@
 <label> รหัสออเดอร์ <select name="id_order_cus">
     <?php foreach($order_List as $ord)
         {echo "<option value = $ord->id_order_cus";
-        if($ord->id_order_cus==$order->id_order_cus){echo " selected='selected'";}
+        if($ord->id_order_cus==$detail_order->id_order_cus){echo " selected='selected'";}
         echo "> $ord->id_order_cus</option>";}
     ?>
     </select> </label><br>
@@ -18,8 +18,8 @@
 <label>สินค้า <select name="id_cop">
     <?php foreach($color_of_product_List as $cop) 
         {echo "<option value = $cop->id_cop";
-        if($cop->id_cop==$color_of_product->id_cop){echo " selected='selected'";}
-        echo "> $color_of_product->name_product $color_of_product->name_color</option>";}
+        if($cop->id_cop==$detail_order->id_cop){echo " selected='selected'";}
+        echo "> $cop->name_product $cop->name_color</option>";}
         ?>
     </select></label><br>
 <input type="hidden"name="controller"value="detail_order"/>
