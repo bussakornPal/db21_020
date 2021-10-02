@@ -36,7 +36,6 @@
         $id_staff=$_GET['fname_staff'];
         $id_customer=$_GET['name_customer'];
         $id=$_GET['id'];
-        //echo "oo".$id_order_cus." ".$date_order." ".$id_customer." ".$id_staff." ".$id;
 
         Order::update($id_order_cus,$date_order,$id_staff,$id_customer,$id);
         OrderController::index();
@@ -58,9 +57,8 @@
     }
     public function delete()
     {
-        echo "pp";
+       
         $id=$_GET['id'];
-        echo $id;
         Order::delete($id);
         OrderController::index();
 
