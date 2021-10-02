@@ -56,13 +56,39 @@
         return $detail_orderList;
     }
     public static function add($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop)
-    { echo "haha";
+    { //echo "haha";
        require("connect_database.php");
        $sql = "INSERT INTO `detail_order_customer`(`id_doc`,`print_color`,`amount_order_cus`,`id_order_cus`,`id_cop`)
        values('$id_doc','$print_color','$amount_order_cus','$id_order_cus','$id_cop');";
        $result = $conn->query($sql);
        require("connection_close.php");
        return ;
+    }
+    public static function update($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop)
+    {
+        require("connect_database.php");
+        $sql="UPDATE `detail_order_customer` SET `id_doc`='$id_doc',`print_color`='$print_color',
+        `amount_order_cus`='$amount_order_cus',`id_order_cus`='$id_order_cus',`id_cop`='$id_cop' WHERE id_doc = '$id_doc'";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return ;
+
+    }
+    public static function get($id_doc)
+    {
+        require("connect_database.php");
+        $sql="SELECT id_doc,id_order_cus,id_cop,product.name_product,color.name_color,print_color,amount_order_cus FROM detail_order_customer NATURAL JOIN color_of_product NATURAL JOIN product NATURAL JOIN color WHERE id_doc='$id_doc' ORDER BY id_order_cus,id_doc";
+        $result=$conn->query($sql);
+        $my_row=$result->fetch_assoc();
+        $id_doc = $my_row[id_doc];
+        $print_color = $my_row[print_color];
+        $amount_order_cus = $my_row[amount_order_cus];
+        $id_order_cus = $my_row[id_order_cus];
+        $id_cop = $my_row[id_cop];
+        $name_color =$my_row[name_color];
+        $name_product = $my_row[name_product];
+        require("connection_close.php");
+        return new detail_order($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop,$name_product,$name_color);
     }
 }
 ?>

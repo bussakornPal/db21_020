@@ -29,5 +29,14 @@
         detail_order::add($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop);
         Detail_OrderController::index();
     }
+    public function updateForm()
+    {
+        $id_doc=$_GET['id_doc'];
+        $detail_order=detail_order::get($id_doc);
+        $order_List = Order::getAll();
+        $color_of_product_List = color_of_product::getAll();
+        require_once('./views/detail_order/updateForm.php');
+
+    }
 }
 ?>
