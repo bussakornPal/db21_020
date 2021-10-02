@@ -19,7 +19,7 @@ search</button>
     <td>$detail_order->print_color</td> 
     <td>$detail_order->amount_order_cus</td> 
     <td><a href=?controller=detail_order&action=updateForm&id_doc=$detail_order->id_doc>update</a></td> 
-    <td>delete</td> 
+    <td><a href=?controller=detail_order&action=deleteConfirm&id_doc=$detail_order->id_doc>delete</td> 
     </tr>";
 }
 echo "</table>";
