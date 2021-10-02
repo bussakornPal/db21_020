@@ -105,6 +105,14 @@
         return ;
         
      }
+     public static function delete($id)
+     {
+         require_once("connect_database.php");
+         $sql="DELETE FROM `order_cutomer` WHERE id_customer='$id'";
+         $result=$conn->query($sql);
+         require("connection_close.php");
+         return ;
+     }
 
 
 
