@@ -20,7 +20,7 @@
         require_once("./views/detail_order/index_detail_order.php");
     }
     public function adddetail_order()
-    { //echo "eieie";
+    { echo "eieie";
         //$id_doc = $_GET['id_doc'];
         //$print_color = $_GET['print_color'];
         //$amount_order_cus = $_GET['amount_order_cus'];
