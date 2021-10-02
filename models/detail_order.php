@@ -51,6 +51,7 @@
             $name_product = $my_row[name_product];
             $detail_orderList[] = new detail_order($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop,$name_product,$name_color);
         }
+        echo "seeerrch";
         require("connection_close.php");
         return $detail_orderList;
     }
