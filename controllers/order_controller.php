@@ -50,7 +50,7 @@
     }
     public function deleteConfirm()
     {
-        $id=$_GET['id'];
+        $id=$_GET['id_order_cus'];
         $order=Order::get($id);
         require_once('./views/order/deleteConfirm.php');
 
@@ -58,8 +58,10 @@
     }
     public function delete()
     {
+        echo "pp";
         $id=$_GET['id'];
-        Order::get($id);
+        echo $id;
+        Order::delete($id);
         OrderController::index();
 
     }

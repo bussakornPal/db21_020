@@ -1,5 +1,5 @@
 <?php echo "<br>Are you sure to delete this order<br>
-            <br>$order->id_order_cus$order->name_customer<br>";?>
+            $order->id_order_cus $order->name_customer<br>";?>
 
 <form method="get" action="">
     <input type="hidden" name="controller" value="order"/>
