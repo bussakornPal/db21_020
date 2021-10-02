@@ -16,7 +16,7 @@
         //echo "hello";
         $detail_orderList =[];
         require("connect_database.php");
-        $sql = "SELECT id_doc,id_order_cus,id_cop,product.name_product,color.name_color,print_color,amount_order_cus FROM detail_order_customer NATURAL JOIN color_of_product NATURAL JOIN product NATURAL JOIN color ORDER BY id_doc";
+        $sql = "SELECT id_doc,id_order_cus,id_cop,product.name_product,color.name_color,print_color,amount_order_cus FROM detail_order_customer NATURAL JOIN color_of_product NATURAL JOIN product NATURAL JOIN color ";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc())
         {
@@ -38,7 +38,7 @@
         $detail_orderList=[];
         require("connect_database.php");
         $sql = "SELECT id_doc,id_order_cus,id_cop,product.name_product,color.name_color,print_color,amount_order_cus FROM detail_order_customer NATURAL JOIN color_of_product NATURAL JOIN product NATURAL JOIN color
-         WHERE (id_doc like'%$key%' or amount_order_cus like'%$key%' or id_order_cus like'%$key%' or id_cop like'%$key%' or name_color like '%$key%' or name_product like '%$key%') ORDER BY id_doc";
+         WHERE (id_doc like'%$key%' or amount_order_cus like'%$key%' or id_order_cus like'%$key%' or id_cop like'%$key%' or name_color like '%$key%' or name_product like '%$key%') ";
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
