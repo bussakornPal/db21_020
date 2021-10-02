@@ -38,5 +38,16 @@
         require_once('./views/detail_order/updateForm.php');
 
     }
+    public function update()
+    {
+        $id_doc=$_GET['id_doc'];
+        $print_color=$_GET['print_color'];
+        $amount_order_cus=$_GET['amount_order_cus'];
+        $id_order_cus=$_GET['id_order_cus'];
+        $id_cop = $_GET['id_cop'];
+        $id=$_GET['id'];
+        detail_order::update($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop,$id);
+        Detail_OrderController::index();
+    }
 }
 ?>
