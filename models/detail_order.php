@@ -56,7 +56,7 @@
         return $detail_orderList;
     }
     public static function add($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop)
-    {
+    { echo "haha";
        require("connect_database.php");
        $sql = "INSERT INTO `detail_order_customer`(`id_doc`,`print_color`,`amount_order_cus`,`id_order_cus`,`id_cop`)
        values('$id_doc','$print_color','$amount_order_cus','$id_order_cus','$id_cop');";
