@@ -19,7 +19,7 @@
     <?php foreach($color_of_product_List as $cop) 
         {echo "<option value = $cop->id_cop";
         if($cop->id_cop==$color_of_product->id_cop){echo " selected='selected'";}
-        echo "> $cop->name_product $cop->name_color</option>";}
+        echo "> $color_of_product->name_product $color_of_product->name_color</option>";}
         ?>
     </select></label><br>
 <input type="hidden"name="controller"value="detail_order"/>
