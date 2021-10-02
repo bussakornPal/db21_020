@@ -49,5 +49,14 @@
         detail_order::update($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop,$id);
         Detail_OrderController::index();
     }
+    public function deleteConfirm()
+    {
+        $id_doc=$_GET['id_doc'];
+        $detail_order=detail_order::get($id);
+        require_once('./views/detail_order/deleteConfirm.php');
+
+    }
+
+
 }
 ?>
