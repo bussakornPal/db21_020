@@ -1,6 +1,7 @@
 <?php class detail_order{
     public $id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop;
-    public function __construct($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop)
+    public $name_product,$name_color;
+    public function __construct($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop,$name_product,$name_color)
     {
         $this->id_doc = $id_doc;
         $this->print_color = $print_color;
@@ -13,7 +14,7 @@
         //echo "hello";
         $detail_orderList =[];
         require("connect_database.php");
-        $sql = "SELECT * FROM detail_order_customer";
+        $sql = "SELECT id_doc,id_order_cus,id_cop,product.name_product,color.name_color,print_color,amount_order_cus FROM detail_order_customer NATURAL JOIN color_of_product NATURAL JOIN product NATURAL JOIN color";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc())
         {
@@ -22,7 +23,9 @@
             $amount_order_cus = $my_row[amount_order_cus];
             $id_order_cus = $my_row[id_order_cus];
             $id_cop = $my_row[id_cop];
-            $detail_orderList[] = new detail_order($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop);
+            $name_color =$my_row[name_color];
+            $name_product = $my_row[name_product];
+            $detail_orderList[] = new detail_order($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop,$name_product,$name_color);
         }
         //echo $id_cop;
         require("connection_close.php");
