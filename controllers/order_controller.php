@@ -56,6 +56,13 @@
 
 
     }
+    public function delete()
+    {
+        $id=$_GET['id'];
+        Order::get($id);
+        OrderController::index();
+
+    }
     
 
 }
