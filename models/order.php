@@ -106,8 +106,9 @@
      }
      public static function delete($id)
      {
+         echo "gg";
          require_once("connect_database.php");
-         $sql="DELETE FROM `order_cutomer` WHERE id_customer='$id'";
+         $sql="DELETE FROM `order_cutomer` WHERE id_order_cus='$id'";
          $result=$conn->query($sql);
          require("connection_close.php");
          return ;
