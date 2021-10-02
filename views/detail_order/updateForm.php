@@ -22,5 +22,8 @@
         echo "> $cop->name_product $cop->name_color</option>";}
         ?>
     </select></label><br>
-
+<input type="hidden"name="controller"value="detail_order"/>
+<input type="hidden" name="id" value="<?php echo $detail_order->id_doc; ?>"/>
+<button type="submit"name="action"value="index">back</button>
+<button type="submit"name="action"value="update">update</button>
 </form>

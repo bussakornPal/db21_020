@@ -64,11 +64,11 @@
        require("connection_close.php");
        return ;
     }
-    public static function update($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop)
+    public static function update($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop,$id)
     {
         require("connect_database.php");
         $sql="UPDATE `detail_order_customer` SET `id_doc`='$id_doc',`print_color`='$print_color',
-        `amount_order_cus`='$amount_order_cus',`id_order_cus`='$id_order_cus',`id_cop`='$id_cop' WHERE id_doc = '$id_doc'";
+        `amount_order_cus`='$amount_order_cus',`id_order_cus`='$id_order_cus',`id_cop`='$id_cop' WHERE id_doc = '$id'";
         $result=$conn->query($sql);
         require("connection_close.php");
         return ;
