@@ -19,8 +19,8 @@
         $detail_order_List=detail_order::search($key);
         require_once("./views/detail_order/index_detail_order.php");
     }
-    //public function adddetail_order()
-    //{
+    public function adddetail_order()
+    { echo "eieie";
     //    $id_doc = $_GET['id_doc'];
      //   $print_color = $_GET['print_color'];
      //   $amount_order_cus = $_GET['amount_order_cus'];
@@ -28,6 +28,6 @@
     //    $id_cop = $_GET['id_cop'];
     //    detail_order::add($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop)
      //   Detail_OrderController::index();
-    //}
+    }
 }
 ?>
