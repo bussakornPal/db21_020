@@ -1,4 +1,5 @@
 <?php class OrderController{
+use Ds\Collection;
     public function index()
     {
         $order_List=Order::getAll();
