@@ -63,7 +63,7 @@
     public static function search($key)
     {
         require("connect_database.php");
-        $sql="SELECT * FROM order_cutomer NATURAL JOIN staff NATURAL JOIN customer WHERE (date_order like '%$key%' or fname_staff like '%$key%' or name_customer like '%$key%')and id_order_cus=id_staff";
+        $sql="SELECT * FROM order_cutomer NATURAL JOIN staff NATURAL JOIN customer WHERE date_order like '%$key%' or fname_staff like '%$key%' or name_customer like '%$key%' or id_order_cus LIKE '%$key%'";
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
