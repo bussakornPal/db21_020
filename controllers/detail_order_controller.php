@@ -14,6 +14,7 @@
     }
     public function search()
     {
+        echo "hi";
         $key=$_GET['key'];
         $detail_order_List=detail_order::search($key);
         require_once("./views/detail_order/index_detail_order.php");
