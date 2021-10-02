@@ -14,19 +14,20 @@
     }
     public function search()
     {
+        //echo "hi";
         $key=$_GET['key'];
         $detail_order_List=detail_order::search($key);
         require_once("./views/detail_order/index_detail_order.php");
     }
-    //public function adddetail_order()
-    //{
-    //    $id_doc = $_GET['id_doc'];
-     //   $print_color = $_GET['print_color'];
-     //   $amount_order_cus = $_GET['amount_order_cus'];
-     //   $id_order_cus = $_GET['id_order_cus'];
-    //    $id_cop = $_GET['id_cop'];
-    //    detail_order::add($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop)
-     //   Detail_OrderController::index();
-    //}
+    public function adddetail_order($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop)
+    { //echo "eieie";
+        $id_doc = $_GET['id_doc'];
+        $print_color = $_GET['print_color'];
+        $amount_order_cus = $_GET['amount_order_cus'];
+        $id_order_cus = $_GET['id_order_cus'];
+        $id_cop = $_GET['id_cop'];
+        detail_order::add($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop)
+        Detail_OrderController::index();
+    }
 }
 ?>
