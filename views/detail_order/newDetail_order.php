@@ -13,6 +13,6 @@
 
 <input type="hidden" name="controller" value = "detail_order"/>
 <button type="submit"name="action" value = "index"> Back </button>
-<button type="submit"name="action" value= "addDetail_order"> Save </button>
+<button type="submit"name="action" value= "adddetail_order"> Save </button>
 
 </form>
