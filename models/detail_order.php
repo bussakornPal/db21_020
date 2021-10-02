@@ -8,6 +8,8 @@
         $this->amount_order_cus = $amount_order_cus;
         $this->id_order_cus = $id_order_cus;
         $this->id_cop = $id_cop;
+        $this->name_color = $name_color;
+        $this->name_product = $name_product;
     }
     public static function getAll()
     {
