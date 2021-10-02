@@ -30,8 +30,21 @@
     }
     public static function search($key)
     {
+        $detail_orderList=[];
         require("connect_database.php");
-        $sql = "";
+        $sql = "SELECT * FROM detail_order_customer WHERE (id_doc like'%$key%')";
+        $result=$conn->query($sql);
+        while($my_row=$result->fetch_assoc())
+        {
+            $id_doc = $my_row[id_doc];
+            $print_color = $my_row[print_color];
+            $amount_order_cus = $my_row[amount_order_cus];
+            $id_order_cus = $my_row[id_order_cus];
+            $id_cop = $my_row[id_cop];
+            $detail_orderList[] = new detail_order($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop);
+        }
+        require("connection_close.php");
+        return $detail_orderList;
     }
 }
 ?>
