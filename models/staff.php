@@ -7,7 +7,6 @@
     }
     public static function getAll()
     {
-        echo "sf";
         $staffList=[];
         require("connect_database.php");
         $sql="select * from staff";
