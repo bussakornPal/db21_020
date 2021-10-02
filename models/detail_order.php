@@ -32,7 +32,7 @@
     {
         $detail_orderList=[];
         require("connect_database.php");
-        $sql = "SELECT * FROM detail_order_customer WHERE (id_doc like'%$key%' or print_color like'%$key%' or amount_order_cus like'%$key%' or id_order_cus like'%$key%' or id_cop like'%$key%')";
+        $sql = "SELECT * FROM detail_order_customer WHERE (id_doc like'%$key%' or amount_order_cus like'%$key%' or id_order_cus like'%$key%' or id_cop like'%$key%')";
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
