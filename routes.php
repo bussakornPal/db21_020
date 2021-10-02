@@ -20,6 +20,7 @@ function call($controller,$action){
                                 $controller = new Detail_OrderController();
                                 break;
         case "range_price" : require_once("./models/range_price.php");
+                             require_once("./models/product.php");
                             $controller = new Range_PriceController();
                             break;
     }
