@@ -60,6 +60,15 @@
 
     }
 
+    public function delete()
+    {
+       
+        $id_range=$_GET['id_range'];
+        range_price::delete($id_range);
+        Range_PriceController::index();
+
+    }
+
 
 
 }
