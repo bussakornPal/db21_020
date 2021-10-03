@@ -81,8 +81,8 @@
      public static function update($id_range,$min_range,$max_range,$price,$color_price,$id_product,$id)
      {
         require("connect_database.php");
-        $sql="UPDATE `range_price` SET `id_range`='$id_range',`min_range`='$min_range',
-        `max_range`='$max_range',`price`='$price',`color_price`='$color_price',`id_product`='$id_product' WHERE id_range = '$id'";
+        $sql="UPDATE `range_price` SET `id_range`='$id_range',`min_range`=$min_range,
+        `max_range`=$max_range,`price`=$price,`color_price`=$color_price,`id_product`='$id_product' WHERE id_range = '$id'";
         $result=$conn->query($sql);
         require("connection_close.php");
         return ;
