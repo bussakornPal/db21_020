@@ -13,6 +13,6 @@
 
 <input type="hidden"name="controller"value="range_price"/>
 <button type= "submit"name="action"value="index">back</button>
-<button type= "submit"name="action"value="addRange_price">Save</button>
+<button type= "submit"name="action"value="addrange_price">Save</button>
 
 </form>
