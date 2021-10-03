@@ -1,9 +1,9 @@
 <form method="get" action="">
 <label>รหัสขอบเขตราคา <input type="text" name="id_range"/></label><br>
-<label>ราคาต่ำสุด <input type="text" name="min_range"/></label><br>
-<label>ราคาสูงสุด <input type="text" name="max_range"/></label><br>
-<label>ราคา <input type="text" name="price"/></label><br>
-<label>ราคาของสี <input type="text" name="color_price"/></label><br>
+<label>ราคาต่ำสุด <input type="number" name="min_range"/></label><br>
+<label>ราคาสูงสุด <input type="number" name="max_range"/></label><br>
+<label>ราคา <input type="number" name="price"/></label><br>
+<label>ราคาของสี <input type="number" name="color_price"/></label><br>
 
 <label>รหัสสินค้า <select name="id_product">
     <?php foreach($product_List as $dep) {echo "<option value = $dep->id_product>
