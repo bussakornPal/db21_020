@@ -1,11 +1,11 @@
 <?php class product{
 
     public $id_product;
-    public $name_product
-    public $description_product
-    public $min_product
-    public $id_category
-    public $id_type
+    public $name_product;
+    public $description_product;
+    public $min_product;
+    public $id_category;
+    public $id_type;
     
     public function __construct($id_product,$name_product,$description_product,$min_product,$id_category,$id_type)
     {
