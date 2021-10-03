@@ -25,12 +25,12 @@
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc())
         {
-            $id_product = $my_row[$id_product];
+            $id_product = $my_row[id_product];
             $name_product = $my_row[name_product];
-            $description_product = $my_row[$description_product]
+            $description_product = $my_row[description_product]
             $min_product = $my_row[min_product];
-            $id_category = $my_row[$id_category];
-            $id_type = $my_row[$id_type];
+            $id_category = $my_row[id_category];
+            $id_type = $my_row[id_type];
             $productList[] = new product($id_product,$name_product,$description_product,$min_product,$id_category,$id_type);
         }
         require("connection_close.php");
