@@ -38,6 +38,19 @@
        
     }
 
+    public function update()
+    {
+        $id_range = $_GET['id_range'];
+        $min_range = $_GET['min_range'];
+        $max_range = $_GET['max_range'];
+        $price = $_GET['price'];
+        $color_price = $_GET['color_price'];
+        $id_product = $_GET['id_product'];
+
+        range_price::update($id_range,$min_range,$max_range,$price,$color_price,$id_product);
+        Range_PriceController::index();
+    }
+
 
 
 }
