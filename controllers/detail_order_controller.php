@@ -56,7 +56,12 @@
         require_once('./views/detail_order/deleteConfirm.php');
 
     }
-    
+    public function delete()
+    {
+        $id=$_GET['id_doc'];
+        detail_order::delete($id);
+        Detail_OrderController::index();
+    }
 
 
 }
