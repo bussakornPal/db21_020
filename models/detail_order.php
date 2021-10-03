@@ -94,6 +94,7 @@
     {
         require("connect_database.php");
         $sql="DELETE FROM `detail_order_customer` WHERE id_doc ='$id'";
+        $result=$conn->query($sql);
         require("connection_close.php");
         return ;
     }
