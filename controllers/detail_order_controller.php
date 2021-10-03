@@ -56,6 +56,7 @@
         require_once('./views/detail_order/deleteConfirm.php');
 
     }
+    
 
 
 }

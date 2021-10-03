@@ -90,5 +90,12 @@
         require("connection_close.php");
         return new detail_order($id_doc,$print_color,$amount_order_cus,$id_order_cus,$id_cop,$name_product,$name_color);
     }
+    public static function delete($id)
+    {
+        require("connect_database.php");
+        $sql="DELETE FROM `detail_order_customer` WHERE id_doc ='$id'";
+        require("connection_close.php");
+        return ;
+    }
 }
 ?>
