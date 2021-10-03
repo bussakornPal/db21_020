@@ -7,7 +7,7 @@
 
     public function newrange_price(){
         $product_List = product::getAll();
-        require_once("./views/range_price/newrange_price.php");
+        require_once("./views/range_price/newRange_price.php");
     }
 
 }
