@@ -21,5 +21,14 @@
         Range_PriceController::index();
     }
 
+    public function search(){
+        $key=$_GET['key'];
+        $range_price_List=range_price::search($key);
+        require_once('./views/order/index_range_price.php');
+
+    }
+
+
+
 }
 ?>
