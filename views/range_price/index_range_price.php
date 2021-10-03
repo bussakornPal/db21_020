@@ -1,6 +1,6 @@
 <table border=1>
 new range_price <a href=?controller=range_price&action=newrange_price> click</a><br>
-form method="get" action="">
+<form method="get" action="">
         <input type="text" name="key">
         <input type="hidden" name="controller" value="range_price">
         <button type="submit" name="action" value="search">
