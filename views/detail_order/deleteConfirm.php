@@ -1,8 +1,8 @@
 <?php echo "<br>Are you sure to delete this detail order<br>";
-    echo "รหัสรายละเอียด : $detail_order->id_doc ";
+    echo "รหัสรายละเอียด : $detail_order->id_doc <br>";
     echo "รหัสออร์เดอร์ : $detail_order->id_order_cus<br>";
-    echo "สินค้า : $detail_order->name_product";
-    echo "จำนวนสีสกรีน : $detail_order->print_color";
+    echo "สินค้า : $detail_order->name_product<br>";
+    echo "จำนวนสีสกรีน : $detail_order->print_color<br>";
     echo "จำนวนที่สั่ง : $detail_order->amount_order_cus<br>";
     
 
