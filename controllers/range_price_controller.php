@@ -32,7 +32,7 @@
     {
        
         $id_range=$_GET['id_range'];
-        $product_List=staff::getAll();
+        $product_List=product::getAll();
         $range_price=range_price::get($id_range);
         require_once('./views/range_price/updateForm.php');
        
