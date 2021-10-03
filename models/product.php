@@ -21,7 +21,7 @@
     {
         $productList =[];
         require("connect_database.php");
-        $sql = "select * from product";
+        $sql = "SELECT * from product";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc())
         {

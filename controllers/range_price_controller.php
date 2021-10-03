@@ -47,7 +47,7 @@
         $color_price = $_GET['color_price'];
         $id_product = $_GET['id_product'];
         $id = $_GET['id'];
-
+        echo $id_range. $min_range .$max_range.$price.$color_price.$id_product.$id;
         range_price::update($id_range,$min_range,$max_range,$price,$color_price,$id_product,$id);
         Range_PriceController::index();
     }

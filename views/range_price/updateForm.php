@@ -9,11 +9,11 @@
 <label>ราคา <input type="number" name="price" 
         value="<?php echo $range_price->price;?>"/></label><br>
 <label>ราคาของสี <input type="number" name="color_price" 
-        value="<?php echo $range_price->price;?>"/></label><br>
+        value="<?php echo $range_price->color_price;?>"/></label><br>
 
 <label>รหัสสินค้า <select name="id_product">
     <?php foreach($product_List as $dep) {
-        echo "<option value = $dep->product";
+        echo "<option value = $dep->id_product";
         if($dep->id_product==$range_price->id_product){echo " selected='selected'";}
          echo ">$dep->id_product</option>";}
     ?>
