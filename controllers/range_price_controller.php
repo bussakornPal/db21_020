@@ -27,6 +27,16 @@
         require_once('./views/order/index_range_price.php');
 
     }
+    
+    public function updateForm()
+    {
+       
+        $id_range=$_GET['id_range'];
+        $product_List=staff::getAll();
+        $range_price=range_price::get($id_range);
+        require_once('./views/order/updateForm.php');
+       
+    }
 
 
 
