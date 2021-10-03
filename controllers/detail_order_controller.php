@@ -51,7 +51,7 @@
     }
     public function deleteConfirm()
     {
-        $id_doc=$_GET['id_doc'];
+        $id=$_GET['id_doc'];
         $detail_order=detail_order::get($id);
         require_once('./views/detail_order/deleteConfirm.php');
 
