@@ -11,7 +11,7 @@
     public static function getAll(){
         $range_priceList = [];
         require("connect_database.php");
-        $sql = " select * from range_price ";
+        $sql = " SELECT * FROM range_price ";
         $result = $conn->query($sql);
          while($my_row = $result->fetch_assoc()){
          $id_range = $my_row[id_range];
