@@ -43,7 +43,7 @@
     {
         $range_priceList = [];
         require("connect_database.php");
-        $sql="SELECT * FROM range_price NATURAL JOIN product where id_product like '%$key%' or id _range like '%$key%' ";
+        $sql="SELECT * FROM range_price NATURAL JOIN product where id_product like '%$key%' or id_range like '%$key%' ";
         $result=$conn->query($sql);
         while($my_row=$result->fetch_assoc())
         {
@@ -55,6 +55,7 @@
             $id_product = $my_row[id_product];
             $range_priceList[] = new range_price($id_range,$min_range,$max_range,$price,$color_price,$id_product);
         }
+        echo $min_range;
             require("connection_close.php");
             return $range_priceList;
     
@@ -80,7 +81,7 @@
      }
      public static function update()
      {
-         
+
      }
     
 
