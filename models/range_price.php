@@ -41,6 +41,7 @@
         }
     public static function search($key)
     {
+        $range_priceList = [];
         require("connect_database.php");
         $sql="SELECT * FROM range_price NATURAL JOIN product where id_product like '%$key%' or min_range like '%$key%' or max_range like '%$key%' or price like '%$key%' or color_price like '%$key%' id _range like '%$key%' ";
         $result=$conn->query($sql);
