@@ -1,9 +1,9 @@
 <?php echo "<br>Are you sure to delete this range_price<br>";
-        echo "รหัสขอบเขตราคา : $id_range->id_range <br>";
-        echo "ราคาต่ำสุด : $min_range->min_range<br>";
-        echo "ราคาสูงสุด : $max_range->max_range<br>";
-        echo "ราคา : $price->price<br>";
-        echo "ราคาของสี : $color_price->color_price<br>";
+        echo "รหัสขอบเขตราคา : $range_price->id_range <br>";
+        echo "ราคาต่ำสุด : $range_price->min_range<br>";
+        echo "ราคาสูงสุด : $range_price->max_range<br>";
+        echo "ราคา : $range_price->price<br>";
+        echo "ราคาของสี : $range_price->color_price<br>";
 
 ?>
     <form method="get" action="">
