@@ -78,6 +78,10 @@
          require("connection_close.php");
          return ;
      }
+     public static function update()
+     {
+         
+     }
     
 
 
