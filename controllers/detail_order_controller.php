@@ -58,7 +58,7 @@
     }
     public function delete()
     {
-        $id=$_GET['id_doc'];
+        $id=$_GET['id'];
         detail_order::delete($id);
         Detail_OrderController::index();
     }
