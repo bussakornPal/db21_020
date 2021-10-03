@@ -24,7 +24,7 @@
     public function search(){
         $key=$_GET['key'];
         $range_price_List=range_price::search($key);
-        require_once('./views/order/index_range_price.php');
+        require_once('./views/range_price/index_range_price.php');
 
     }
     
@@ -34,7 +34,7 @@
         $id_range=$_GET['id_range'];
         $product_List=staff::getAll();
         $range_price=range_price::get($id_range);
-        require_once('./views/order/updateForm.php');
+        require_once('./views/range_price/updateForm.php');
        
     }
 
@@ -49,6 +49,15 @@
 
         range_price::update($id_range,$min_range,$max_range,$price,$color_price,$id_product);
         Range_PriceController::index();
+    }
+
+    public function deleteConfirm()
+    {
+        $id_range=$_GET['id_range'];
+        $range_price=range_price::get($id_range);
+        require_once('./views/range_price/deleteConfirm.php');
+
+
     }
 
 
