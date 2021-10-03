@@ -1,12 +1,16 @@
 <?php class product{
 
-    public $id_product,$name_product,$description_product,$min_product,$id_category,$id_type;
+    public $id_product;
+    public $name_product
+    public $description_product
+    public $min_product
+    public $id_category
+    public $id_type
     
     public function __construct($id_product,$name_product,$description_product,$min_product,$id_category,$id_type)
     {
         $this->id_product = $id_product;
         $this->name_product = $name_product;
-        $this->id_color = $id_color;
         $this->description_product = $description_product;
         $this->min_product = $min_product;
         $this->id_category = $id_category;
