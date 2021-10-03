@@ -27,7 +27,7 @@
         {
             $id_product = $my_row[id_product];
             $name_product = $my_row[name_product];
-            $description_product = $my_row[description_product]
+            $description_product = $my_row[description_product];
             $min_product = $my_row[min_product];
             $id_category = $my_row[id_category];
             $id_type = $my_row[id_type];
