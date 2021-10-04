@@ -1,5 +1,8 @@
+<?php 
+    echo "ธิดารัตน์ เปี้ยจัน    6220503261";
+?>
 <table border=1>
-new order <a href=?controller=order&action=newOrder> click</a><br>
+<br>new order <a href=?controller=order&action=newOrder> click</a><br>
 <form method="get" action="">
         <input type="text" name="key">
         <input type="hidden" name="controller" value="order">

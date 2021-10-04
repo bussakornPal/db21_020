@@ -1,5 +1,8 @@
+<?php 
+    echo "ธนากร ค้วนเครือ    6220500636";
+?>
 <table border=1>
-new range_price <a href=?controller=range_price&action=newrange_price> click</a><br>
+<br>new range_price <a href=?controller=range_price&action=newrange_price> click</a><br>
 <form method="get" action="">
         <input type="text" name="key">
         <input type="hidden" name="controller" value="range_price">
