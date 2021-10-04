@@ -1,5 +1,5 @@
 <?php 
-    echo "บุษกร ผลาทร    6220503295";
+    echo "บุษกร ผลาทร    6220503295"<br>;
 ?>
 <table border = 1>   
 new Detail_order <a href=?controller=detail_order&action=newdetail_order> click</a><br>
