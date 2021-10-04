@@ -1,8 +1,8 @@
 <?php 
-    echo "บุษกร ผลาทร    6220503295"<br>;
+    echo "บุษกร ผลาทร    6220503295";
 ?>
 <table border = 1>   
-new Detail_order <a href=?controller=detail_order&action=newdetail_order> click</a><br>
+new Detail_order <br><a href=?controller=detail_order&action=newdetail_order> click</a><br>
 
 <form method="get" action="">
         <input type="text" name="key">
